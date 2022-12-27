@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/logo/logo.png";
 import user from "../assets/avatar-1.png";
-
+import '../styles/side_menu.css'
 import MenuItem from "./MenuItem";
 import UserService from "../../services/UserService";
 import RenderOnRole from "../RenderOnRole";
+import imageSmiley from '../assets/logo/smileylogo.png';
 
 // import { BehaviorSubject } from "rxjs";
 
@@ -23,19 +23,20 @@ import RenderOnRole from "../RenderOnRole";
 // added more menuItems for testing
 export const menuItems = [
   {
-    name: "Dashboard",
+    name: "Home", 
     exact: true,
     to: "/",
-    iconClassName: "bi bi-speedometer2",
+    iconClassName: "bi bi-house-fill",
   },
   {
     name: "Services",
     exact: true,
     to: `/services`,
-    iconClassName: "bi bi-speedometer2",
+    iconClassName: "bi bi-list",
     subMenus: [
-      { name: "Service-1", to: "/service_1/Service1Content" },
-      { name: "Service-2", to: "/service_2/Service2Content" },
+      { name: "Tasks", to: "/tasks/TaskContent" },
+      { name: "Products", to: "/products/ProductContent" },
+      { name: "Orders", to: "/orders/OrdersContent" },
     ],
   },
   { name: "secret", to: `/secret`, iconClassName: "bi bi-vector-pen" },
@@ -134,7 +135,7 @@ const SideMenu = (props) => {
       <div className="top-section">
         <div className="logo">
           {/* <img src={logo} alt="webscript" /> */}
-          <img class="max-w-xl h-auto rounded-lg shadow-xl dark:shadow-gray-800" src={logo} alt="image description"></img>
+          <img class="imageSmiley" src={imageSmiley} alt="image description"></img>
         </div>
         <div onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
           {inactive ? (
@@ -145,12 +146,12 @@ const SideMenu = (props) => {
         </div>
       </div>
 
-      <div className="search-controller">
+      <div className="search-controller search" >
         <button className="search-btn">
-          <i class="bi bi-search"></i>
+          <i class="bi bi-search search"></i>
         </button>
 
-        <input type="text" placeholder="search" />
+        <input type="text" className="search" placeholder="search" />
       </div>
 
       <div className="divider"></div>

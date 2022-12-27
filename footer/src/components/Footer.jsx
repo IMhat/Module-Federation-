@@ -1,7 +1,7 @@
 import React from "react";
 
 import logo from "../assets/logo/logo.png";
-
+import './styles/footer.css';
 export default function Footer() {
   return (
 <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
@@ -11,7 +11,7 @@ export default function Footer() {
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a> */}
 
-       <img class="w-50 h-100 rounded-lg shadow-xl dark:shadow-gray-800" src={logo} alt="image description"></img>
+       <img class="image-uteam" src={logo} alt="image description"></img>
         
 
 

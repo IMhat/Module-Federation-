@@ -5,7 +5,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   devtool: 'inline-source-map',
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:7080/",
   },
 
   resolve: {
@@ -13,7 +13,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 8080,
+    port: 7080,
     historyApiFallback: true,
     headers: {
       "Access-Control-Allow-Origin": "*",
@@ -64,14 +64,13 @@ module.exports = {
         header: "header@http://localhost:8083/remoteEntry.js",
         footer: "footer@http://localhost:8084/remoteEntry.js",
 
-        home: "home@http://localhost:8080/remoteEntry.js",
+        home: "home@http://localhost:7080/remoteEntry.js",
 
         navKey: "navKey@http://localhost:8090/remoteEntry.js",
         
-        // navBar: "navBar@http://localhost:8081/remoteEntry.js",
-        
-        service_1: "service_1@http://localhost:8082/remoteEntry.js",
-        service_2: "service_2@http://localhost:8085/remoteEntry.js",
+        tasks: "tasks@http://localhost:8082/remoteEntry.js",
+        products: "products@http://localhost:8085/remoteEntry.js",
+        orders: "orders@http://localhost:8086/remoteEntry.js",
 
       },
       exposes: {

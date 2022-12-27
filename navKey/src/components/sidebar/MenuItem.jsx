@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-
+import '../styles/menu_items.css'
 
 /**
  * @author
@@ -12,7 +12,7 @@ const MenuItem = (props) => {
   const [expand, setExpand] = useState(false);
 
   return (
-    <li onClick={props.onClick}>
+    <li onClick={props.onClick} className ="item">
       <Link
         exact
         to={to}
@@ -24,7 +24,7 @@ const MenuItem = (props) => {
         <div className="menu-icon">
           <i class={iconClassName}></i>
         </div>
-        <span>{name}</span>
+        <span className="color-nombre">{name}</span>
       </Link>
       {subMenus && subMenus.length > 0 ? (
         <ul className={`sub-menu`}>

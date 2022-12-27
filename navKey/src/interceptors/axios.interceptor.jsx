@@ -34,7 +34,7 @@ const AxiosInterceptor = () => {
             "Content-Type": "application/json",
         };
         request.headers = newHeaders;
-        return request;
+        return request
     };
 
     axios.interceptors.request.use((request) => {

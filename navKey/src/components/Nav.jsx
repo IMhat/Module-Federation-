@@ -41,8 +41,9 @@ const SideMenu = React.lazy( () => import("./sidebar/SideMenu") );
 const Footer = React.lazy( () => import("footer/Footer") );
 const Header = React.lazy( () => import("header/Header") );
 
-const Service1Content = React.lazy( () => import("service_1/Service1Content") );
-const Service2Content = React.lazy( () => import("service_2/Service2Content") );
+const TasksContent = React.lazy( () => import("tasks/TaskContent") );
+const ProductContent = React.lazy( () => import("products/ProductContent") );
+const OrdersContent = React.lazy( () => import("orders/OrdersContent") );
 
 const HomeContent = React.lazy( () => import("home/HomeContent") );
 
@@ -75,18 +76,20 @@ function Nav() {
       
 
           <Switch>
-
             <Route exact path={"/"}>
               <HomeContent />
             </Route>
             <Route exact path={"/services"}>
               <Content />
             </Route>
-            <Route path={"/service_1/Service1Content"}>
-              <Service1Content />
+            <Route path={"/tasks/TaskContent"}>
+              <TasksContent />
             </Route>
-            <Route path={"/service_2/Service2Content"}>
-              <Service2Content />
+            <Route path={"/products/ProductContent"}>
+              <ProductContent />
+            </Route>
+            <Route path={"/orders/OrdersContent"}>
+              <OrdersContent />
             </Route>
             {/* <Route path={"/design"}>
               <Design />

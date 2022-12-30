@@ -3,11 +3,9 @@ import { jwt, username } from "navKey/UserService";
 
 import { getTasksApproved } from "../modules/task";
 import "../styles/tasks_general.css";
-import "./styles/tasks_Approved.css";
-
+import "./styles/tasks_approved.css";
 
 export default function TasksApprovedContent() {
-  
   const [tasksApproved, setTasks] = useState([]);
   const fetchTasks = async () => {
     const { data } = await getTasksApproved();

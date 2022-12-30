@@ -1,7 +1,8 @@
 import React, { useState, useEffect, Suspense } from "react";
-
+import "./styles/counter_tasks_ToDo.css";
 // import { contToDo } from "service_1/CounterTasks";
-import {getTasksToDo} from '../modules/CounterTasks'
+import { getTasksToDo } from "../modules/CounterTasks";
+import iconToDo from "../assets/ToDoIcon.png";
 
 export default function CounterTasksToDo() {
   const [tasksToDo, setTasks] = useState([]);
@@ -16,8 +17,13 @@ export default function CounterTasksToDo() {
     } catch (error) {}
   }, []);
 
-  
-  return <div>
-    <h1>contador ToDo{tasksToDo.length}</h1> 
-    </div>;
+  return (
+    <div className="ToDo-counter">
+      <h1 className="text-counter-ToDo">{tasksToDo.length} Tasks in ToDo</h1>
+
+      <div className="container-icon-ToDo">
+        <img class="iconToDo" src={iconToDo} alt=""></img>
+      </div>
+    </div>
+  );
 }

@@ -3,6 +3,7 @@ import React from 'react';
 import './styles/welcome.css';
 import imageSmiley from './assets/logo/smileylogo.png';
 
+
 const Welcome = () => (
   <div className="stilo1">
     

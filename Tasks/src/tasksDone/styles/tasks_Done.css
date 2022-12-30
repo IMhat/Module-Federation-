@@ -1,5 +1,8 @@
 .statusDone {
   width: 110px;
-  background-color: rgb(9, 214, 9);
+  background-color: rgb(75, 167, 71);
   border-radius: 30px;
+  font-weight: bold;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }

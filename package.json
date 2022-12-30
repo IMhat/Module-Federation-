@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "axios": "^1.2.2",
+    "react-data-table-component": "^7.5.3",
+    "styled-components": "^5.3.6"
+  }
+}

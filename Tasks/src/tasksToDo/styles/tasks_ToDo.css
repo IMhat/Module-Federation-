@@ -1,0 +1,9 @@
+.statusToDo {
+  width: 110px;
+  background-color: rgb(197, 196, 196);
+  border-radius: 30px;
+
+  font-weight: bold;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}

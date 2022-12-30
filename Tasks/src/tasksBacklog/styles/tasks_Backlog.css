@@ -5,6 +5,9 @@
     width: 110px;
     background-color: rgb(233, 133, 133);
     border-radius: 20px;
+    font-weight: bold;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 

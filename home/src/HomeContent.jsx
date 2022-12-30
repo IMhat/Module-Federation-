@@ -20,7 +20,7 @@ export default function HomeContent() {
   return (
     <div className="home">
       Home
-      <div>
+      <div className="counter1">
         <CounterTasksBacklog />
         <CounterTasksToDo />
         <CounterTasksInProgress />

@@ -2,15 +2,11 @@ import React, { useState, useEffect, Suspense } from "react";
 
 import { BehaviorSubject } from "rxjs";
 
-
-
 import { getTasksToDo } from "../modules/task";
 import "../styles/tasks_general.css";
+import "./styles/tasks_ToDo.css";
 
-
-
-export  function TasksToDoContent() {
-
+export function TasksToDoContent() {
   const [tasksToDo, setTasks] = useState([]);
   const fetchTasks = async () => {
     const { data } = await getTasksToDo();
@@ -22,9 +18,6 @@ export  function TasksToDoContent() {
       fetchTasks();
     } catch (error) {}
   }, []);
-
-  
-  
 
   return (
     <div className="containerPadre">
@@ -39,7 +32,7 @@ export  function TasksToDoContent() {
             <h1 className="title">{t.title}</h1>
             <div className="container2">
               <h1 className="priority">{t.priority}</h1>
-              <h1 className="status">{t.status}</h1>
+              <h1 className="statusToDo">{t.status}</h1>
             </div>
 
             <h3>{t.assignmentUser}</h3>

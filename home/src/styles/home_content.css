@@ -1,4 +1,7 @@
-.home{
-    height: 600px;
-    background-color: white;
+.home {
+  align-content: space-around;
+  height: 600px;
+}
+.counter1 {
+  display: flex;
 }

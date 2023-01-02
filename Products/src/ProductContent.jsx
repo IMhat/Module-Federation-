@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Suspense } from "react";
-import { createEffect, createSignal, runWithOwner, Show } from "solid-js";
-import DataTable from "react-data-table-component";
+import { createEffect, createSignal, Show } from "solid-js";
+
 import "./styles/service2.css";
 import { Link } from "react-router-dom";
-import MUIDataTable from "mui-datatables";
+import Datatable from "react-data-table-component";
 
 // import {jwt, username} from "navKey/SideMenu";
 import { jwt, username } from "navKey/UserService";
@@ -20,7 +20,6 @@ export default function ProductContent() {
   const [products, setProducts] = useState([]);
   const fetchProducts = async () => {
     const { data } = await getProducts();
-
     setProducts(data);
   };
 
@@ -55,12 +54,10 @@ export default function ProductContent() {
       sortable: true,
     },
   ];
-
   return (
-    // <Show when={loggedIn()}>
     <div className="products">
       <div className="table-responsive">
-        <DataTable
+        <Datatable
           columns={columnas}
           data={products}
           title="Products"
@@ -69,37 +66,42 @@ export default function ProductContent() {
       </div>
     </div>
 
-    // <div>
-    //   <div className="title-addproducts">Add products to catalog</div>
+    // <Show when={loggedIn()}>
+    //     <div>
+    //     <div className="title-addproducts">Add products to catalog
+    //     </div>
 
-    //   {/* <p>{`Username = ${username.value}`}</p>
+    //    {/* <p>{`Username = ${username.value}`}</p>
     //    <p>{`Token = ${jwt.value}`}</p> */}
 
-    //   {/* {JSON.stringify(products)} */}
+    //     {/* {JSON.stringify(products)} */}
 
-    //   <div className="containerProduct">
-    //     {products.map((product) => (
-    //       <div className="productId" key={product.id}>
-    //         <Link to={`/product/${product.id}`}>
-    //           <img className="image" src={product.images} alt={product.name} />
-    //         </Link>
-    //         <div className="flex">
-    //           <div className="flex-grow font-bold">
-    //             <Link to={`/product/${product.id}`}>
-    //               <a className="nameProduct">{product.name}</a>
-    //             </Link>
-    //           </div>
+    //     <div className="containerProduct">
+    //          {products.map((product) => (
+    //            <div className="productId" key={product.id}>
+    //              <Link to={`/product/${product.id}`}>
+    //                <img className="image" src={product.images} alt={product.name} />
+    //              </Link>
+    //              <div className="flex">
+    //                <div className="flex-grow font-bold">
+    //                  <Link to={`/product/${product.id}`}>
+    //                    <a className="nameProduct">{product.name}</a>
 
-    //           {/* <div className="flex-end">{product.price}</div> */}
-    //         </div>
-    //         {/* <div className="price">{currency.format(product.price)}</div> */}
-    //         <div className="price">{product.price} Points</div>
-    //         {/* <div className="description">{product.description}</div> */}
-    //       </div>
-    //     ))}
-    //   </div>
+    //                  </Link>
 
-    //   {/* <div className="home-content"> Home contentt </div> */}
+    //                </div>
+
+    //                {/* <div className="flex-end">{product.price}</div> */}
+    //              </div>
+    //              {/* <div className="price">{currency.format(product.price)}</div> */}
+    //              <div className="price">{product.price} Points</div>
+    //              {/* <div className="description">{product.description}</div> */}
+    //            </div>
+
+    //          ))}
+    //      </div>
+
+    //     {/* <div className="home-content"> Home contentt </div> */}
     // </div>
   );
 }

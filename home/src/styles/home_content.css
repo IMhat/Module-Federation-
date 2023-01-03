@@ -5,3 +5,7 @@
 .counter1 {
   display: flex;
 }
+.grafica {
+  width: 700px;
+  background-color: white;
+}
